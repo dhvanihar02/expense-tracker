@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+// Use environment variable for the API URL
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
+
 function App() {
   const [expenses, setExpenses] = useState([]);
   const [title, setTitle] = useState("");
@@ -11,7 +14,7 @@ function App() {
   // Fetch expenses
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/expenses");
+      const res = await axios.get(`${API_URL}/api/expenses`);
       setExpenses(res.data);
     } catch (err) {
       console.error("Error fetching expenses:", err);
@@ -24,7 +27,7 @@ function App() {
     if (!title || !amount) return;
 
     try {
-      await axios.post("http://localhost:5001/api/expenses", {
+      await axios.post(`${API_URL}/api/expenses`, {
         title,
         amount: Number(amount),
         type,
@@ -42,7 +45,7 @@ function App() {
   // Delete expense
   const deleteExpense = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/expenses/${id}`);
+      await axios.delete(`${API_URL}/api/expenses/${id}`);
       fetchExpenses();
     } catch (err) {
       console.error("Error deleting expense:", err);
