@@ -14,7 +14,7 @@ function App() {
   // Fetch expenses
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get(`${API_URL}/api/expenses`);
+      const res = await axios.get(`${API_URL}/api/expenses`); // Updated
       setExpenses(res.data);
     } catch (err) {
       console.error("Error fetching expenses:", err);
@@ -27,7 +27,7 @@ function App() {
     if (!title || !amount) return;
 
     try {
-      await axios.post(`${API_URL}/api/expenses`, {
+      await axios.post(`${API_URL}/api/expenses`, { // Updated
         title,
         amount: Number(amount),
         type,
@@ -45,7 +45,7 @@ function App() {
   // Delete expense
   const deleteExpense = async (id) => {
     try {
-      await axios.delete(`${API_URL}/api/expenses/${id}`);
+      await axios.delete(`${API_URL}/api/expenses/${id}`); // Updated
       fetchExpenses();
     } catch (err) {
       console.error("Error deleting expense:", err);
