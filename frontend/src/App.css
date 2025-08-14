@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f8;
+}
+
+header {
+  background-color: #4f46e5;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.summary-card {
+  flex: 1;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.summary-card h3 {
+  margin: 0;
+  color: #555;
+}
+
+.summary-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+.income {
+  color: #16a34a; 
+}
+
+.expense {
+  color: #dc2626; 
+}
+
+/* Form Inputs */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus, select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4f46e5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table thead {
+  background-color: #f0f0f0;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table td:last-child {
+  text-align: center;
+}
+
+/* Row Color Coding */
+tr.income-row {
+  background-color: #ecfdf5; 
+}
+
+tr.expense-row {
+  background-color: #fef2f2; 
+}
+
+table button {
+  padding: 5px 8px;
+  font-size: 0.9rem;
+  background-color: #ef4444;
+}
+
+table button:hover {
+  background-color: #dc2626;
+}
